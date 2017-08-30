@@ -1,0 +1,48 @@
+.main-nav {
+  background-color: rgb(42, 42, 42);
+
+  &__wrapper {
+    @include container();
+    padding: 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__anchor {
+    display: block;
+    padding: 30px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:not([href]) {
+      color: $yellow;
+    }
+
+    &--logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 100px;
+      margin-left: 20px;
+      padding: 0;
+      height: 100%;
+    }
+  }
+}

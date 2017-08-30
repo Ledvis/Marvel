@@ -1,0 +1,170 @@
+.about {
+  &__wrapper {
+    @include container();
+    padding: 130px 20px;
+    text-align: center;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 0 30px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "About";
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      bottom: 20px;
+      color: rgb(232, 232, 232);
+      font-family: Montserrat;
+      font-size: 91px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__descr {
+    margin: 0 0 60px;
+    padding: 0 200px;
+    color: rgb(117, 117, 117);
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__features {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 140px;
+  }
+
+  &__item {
+    flex-grow: 1;
+    position: relative;
+    display: block;
+    width: 30%;
+    padding: 250px 20px 20px;
+    text-decoration: none;
+    background-color: rgb(33, 33, 33);
+    border: 1px solid $yellow;
+
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+
+    &--star {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        width: 111px;
+        height: 104px;
+        background: url("../img/sprite.png") no-repeat 0 0;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--glob {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        width: 103px;
+        height: 102px;
+        background: url("../img/sprite.png") no-repeat 0 -104px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--lock {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        width: 95px;
+        height: 126px;
+        background: url("../img/sprite.png") no-repeat 0 -206px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--active {
+      background-color: $yellow;
+      border-color: #000;
+      cursor: default;
+
+      .about__subtitle {
+        color: #fff;
+      }
+
+      .about__item-text {
+        display: block;
+        color: #fff;
+        font-family: Muli;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: $yellow;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__item-text {
+    display: none;
+  }
+
+  &__caption {
+    margin: 0 0 60px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+
+  &__stat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__stat-item {
+    flex-grow: 1;
+    width: 25%;
+  }
+
+  &__stat-number {
+    margin: 0;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__stat-legend {
+    color: rgb(117, 117, 117);
+    font-family: Muli;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
