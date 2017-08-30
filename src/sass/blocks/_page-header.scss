@@ -1,0 +1,23 @@
+.page-header {
+  &__wrapper {
+    @include container();
+    position: relative;
+  }
+
+  &__title {
+    margin: 0 0 70px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 60px;
+    font-weight: 900;
+  }
+
+  &__descr {
+    margin: 0 0 20px;
+    color: rgb(117, 117, 117);
+    font-family: Muli;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
