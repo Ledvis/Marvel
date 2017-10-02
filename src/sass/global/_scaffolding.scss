@@ -1,3 +1,7 @@
+html {
+	font-family: Arial, sans-serif;
+}
+
 body {
 	position: relative;
 	max-width: 1920px;
@@ -8,6 +12,10 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+.fonts-loaded {
+	font-family: Muli, Arial, sans-serif;
 }
 
 .visually-hidden {

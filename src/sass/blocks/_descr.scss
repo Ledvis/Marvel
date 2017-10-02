@@ -1,0 +1,36 @@
+.descr {
+  position: relative;
+  background: rgb(64, 64, 64) url("../img/descr-bg.jpg") no-repeat center top;
+  background-size: 1920px;
+
+  &__wrapper {
+    @include container();
+    padding: 170px 210px 135px;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 60px;
+  }
+
+  &__promo {
+    margin: 0 0 35px;
+    color: rgb(253, 253, 253);
+    font-family: Montserrat;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0 0 70px;
+    color: rgb(253, 253, 253);
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  &__container {}
+}

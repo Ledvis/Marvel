@@ -1,0 +1,126 @@
+.gallery {
+  position: relative;
+  display: flex;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    width: 50%;
+
+    &:hover .gallery__panel {
+      display: block;
+      opacity: 1;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -22px;
+      right: 20px;
+      width: 96px;
+      height: 22px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      border: 1px solid rgb(203, 203, 203);
+      border-bottom: none;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__small {
+    color: rgb(117, 117, 117);
+    font-size: 10px;
+  }
+
+  &__search {
+    position: absolute;
+    top: -16px;
+    right: 52px;
+    width: 33px;
+    height: 32px;
+    background-color: rgb(255, 228, 0);
+    border: 1px solid rgb(227, 204, 0);
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 13px;
+      height: 12px;
+      background-color: red;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__slideshow {
+    width: 50%;
+    padding-top: 80px;
+    text-align: center;
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 50%;
+      height: auto;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::before {
+      content: "Photo";
+      position: absolute;
+      z-index: -1;
+      bottom: -13px;
+      left: 50%;
+      color: rgb(240, 240, 240);
+      font-family: Montserrat;
+      font-size: 91px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+    }
+  }
+}

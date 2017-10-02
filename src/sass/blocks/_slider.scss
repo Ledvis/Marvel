@@ -8,12 +8,13 @@
   &__slides {
     @include clearfix();
     width: 300%;
+    transition: all 1s;
   }
 
   &__item {
     @include border-box();
     float: left;
-    width: 1200px;
+    width: 1170px;
     padding: 200px 500px 200px 20px;
 
     &--bg-1 {
@@ -48,6 +49,7 @@
       margin-right: 10px;
       background-color: rgb(227, 227, 227);
       cursor: pointer;
+      transition: all 0.5s;
 
       &:hover {
         background-color: rgb(68, 68, 68);
@@ -64,11 +66,11 @@
   }
 
   #review-2:checked ~ .slider__slides {
-    transform: translateX(-1200px);
+    transform: translateX(-1170px);
   }
 
   #review-3:checked ~ .slider__slides {
-    transform: translateX(-2400px);
+    transform: translateX(-2340px);
   }
 
   #review-1:checked ~ .slider__toggles-list label[for="review-1"] {

@@ -1,0 +1,111 @@
+.service {
+  position: relative;
+  background: url("../img/service-bg.jpg") no-repeat left bottom;
+  background-size: 936px auto;
+  overflow: hidden;
+
+  &::before {}
+
+  &__wrapper {
+    @include container();
+    padding: 150px 15px 40px 600px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 140px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "Service";
+      position: absolute;
+      z-index: -1;
+      bottom: 20px;
+      left: 0;
+      color: rgb(237, 237, 237);
+      font-family: Montserrat;
+      font-size: 91px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include border-box();
+    position: relative;
+    width: 50%;
+    padding: 120px 0 60px;
+    text-align: center;
+    border: 1px solid rgb(230, 230, 230);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 50%;
+      width: 39px;
+      height: 36px;
+      background-color: red;
+      transform: translateX(-50%);
+    }
+
+    &:nth-of-type(1) {
+      border: none;
+    }
+
+    &:nth-of-type(2) {
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &:nth-of-type(3) {
+      border-right: none;
+      border-left: none;
+      border-bottom: none;
+    }
+
+    &:nth-of-type(4) {
+      border-right: none;
+      border-bottom: none;
+    }
+  }
+
+  &__caption {
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    margin: 0;
+    color: rgb(117, 117, 117);
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  &__decoration {
+    position: absolute;
+    left: -300px;
+    bottom: -500px;
+    color: rgba(255, 228, 0, 0.3);
+    font-family: Montserrat;
+    font-size: 900px;
+    font-weight: 700;
+  }
+}
