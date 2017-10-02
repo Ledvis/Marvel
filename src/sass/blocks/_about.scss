@@ -1,4 +1,7 @@
 .about {
+  background: url("../img/about-bg.jpg") no-repeat center;
+  background-size: contain;
+
   &__wrapper {
     @include container();
     padding: 130px 20px;
@@ -7,6 +10,7 @@
 
   &__title {
     position: relative;
+    z-index: 1;
     margin: 0 0 30px;
     color: rgb(68, 68, 68);
     font-family: Montserrat;

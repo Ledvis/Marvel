@@ -1,0 +1,173 @@
+.price {
+  background: rgb(230, 209, 25) url("../img/price-bg.jpg") no-repeat center top;
+  background-size: 1920px;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    padding: 110px 15px 100px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0 0 140px;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::before {
+      content: "Pricing";
+      position: absolute;
+      z-index: -1;
+      bottom: -14px;
+      left: 50%;
+      color: rgb(230, 209, 25);
+      font-family: Montserrat;
+      font-size: 91px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    width: 30%;
+    text-align: center;
+
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+
+    &--popular {
+      position: relative;
+
+      &::before {
+        content: "Most Popular";
+        position: absolute;
+        top: -39px;
+        left: 0;
+        width: 360px;
+        height: 39px;
+        color: rgb(68, 68, 68);
+        font-family: Muli;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 39px;
+        background-color: rgb(230, 230, 230);
+      }
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    padding: 20px 0 80px;
+    background: url("../img/price-item-1.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: -10px;
+    left: 50%;
+    background-color: rgb(255, 228, 0);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+
+  &__caption {
+    margin: 0 0 40px;
+    color: rgb(255, 255, 255);
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__cost {
+    margin: 0 0 30px;
+  }
+
+  &__dollar {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    color: rgb(255, 255, 255);
+    font-family: Muli;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  &__number {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 60px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+  &__date {
+    display: inline-block;
+    vertical-align: bottom;
+    color: rgb(255, 255, 255);
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin: 0;
+    color: rgb(219, 219, 219);
+    font-family: Muli;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  &__item-body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  &__list {
+    margin: 0 0 4px;
+    padding: 60px 0 0;
+    list-style: none;
+  }
+
+  &__point {
+    position: relative;
+    color: rgb(128, 128, 128);
+    font-family: Muli;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+
+    &:not(:first-of-type) {
+      border-top: 1px solid rgb(241, 241, 241);
+    }
+  }
+
+  &__subscribe {
+    display: block;
+    padding: 5px 10px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+  }
+}
