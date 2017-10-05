@@ -34,19 +34,87 @@
     flex-wrap: wrap;
   }
 
-  &__item {
-    flex-grow: 1;
-    width: 30%;
-    text-align: center;
+  &__box {
+    position: relative;
 
     &:not(:last-of-type) {
       margin-right: 30px;
     }
   }
 
-  &__item-footer {}
+  &__item {
+    flex-grow: 1;
+    width: 30%;
+    text-decoration: none;
+    text-align: center;
 
-  &__name {}
+    img {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
 
-  &__position {}
+  &__info {
+    @include border-box();
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 533px;
+    padding: 90px 20px 10px;
+    text-align: center;
+    background-color: rgb(255, 228, 0);
+  }
+
+  &__item-footer {
+    padding: 20px 25px;
+    background-color: rgb(235, 235, 235);
+  }
+
+  &__name {
+    margin: 0;
+    padding-bottom: 20px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px dotted rgb(183, 183, 183);
+
+    &--yellow {
+      margin-bottom: 20px;
+      padding: 0;
+      font-size: 24px;
+      border: none;
+    }
+  }
+
+  &__position {
+    margin: 0;
+    padding-top: 20px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &--yellow {
+      margin-bottom: 70px;
+      padding: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 120px;
+    color: rgb(0, 0, 0);
+    font-family: Muli;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .social {
+    border-top: 1px dotted rgb(171, 153, 0);
+  }
 }

@@ -1,0 +1,62 @@
+.social {
+  padding: 40px 0;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 128px;
+      height: 128px;
+      background: url("../img/sprite.png") no-repeat;
+      transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &--tw {
+      &::before {
+        background-position: -5px -338px;
+      }
+    }
+
+    &--ld {
+      &::before {
+        background-position: -5px -604px;
+      }
+    }
+
+    &--fb {
+      &::before {
+        background-position: -5px -205px;
+      }
+    }
+
+    &--sk {
+      &::before {
+        background-position: -5px -471px;
+      }
+    }
+
+    &--pi {
+      &::before {
+        background-position: -5px -870px;
+      }
+    }
+
+    &--ap {
+      &::before {
+        background-position: -5px -737px;
+      }
+    }
+  }
+}
