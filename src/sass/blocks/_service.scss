@@ -54,10 +54,40 @@
       position: absolute;
       top: 45px;
       left: 50%;
-      width: 39px;
-      height: 36px;
-      background-color: red;
+      background: url("../img/sprite.png") no-repeat;
       transform: translateX(-50%);
+    }
+
+    &--gear {
+      &::before {
+        width: 36px;
+        height: 36px;
+        background-position: -138px -319px;
+      }
+    }
+
+    &--cam {
+      &::before {
+        width: 36px;
+        height: 27px;
+        background-position: -138px -287px;
+      }
+    }
+
+    &--case {
+      &::before {
+        width: 39px;
+        height: 36px;
+        background-position: -138px -205px;
+      }
+    }
+
+    &--bell {
+      &::before {
+        width: 36px;
+        height: 36px;
+        background-position: -138px -246px;
+      }
     }
 
     &:nth-of-type(1) {

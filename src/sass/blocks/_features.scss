@@ -5,6 +5,7 @@
   }
 
   &__promo {
+    position: relative;
     margin: 0 0 130px;
     color: rgb(68, 68, 68);
     font-family: Montserrat;
@@ -12,6 +13,20 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+
+    &::before {
+      content: "Features";
+      position: absolute;
+      z-index: -1;
+      bottom: -14px;
+      left: 50%;
+      color: rgb(240, 240, 240);
+      font-family: Montserrat;
+      font-size: 91px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+    }
   }
 
   &__container {
@@ -36,12 +51,11 @@
     &::before {
       content: "";
       position: absolute;
-      width: 66px;
-      height: 66px;
-      background-color: red;
-      border-radius: 50%;
       top: 0;
       left: 0;
+      width: 67px;
+      height: 66px;
+      background: url("../img/sprite.png") no-repeat -121px -1003px;
     }
 
     &:not(:last-of-type) {
@@ -50,7 +64,55 @@
 
     &--1 {
       &::before {
-        background-color: green;
+        background-position: -121px -1003px;
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-position: -121px -1074px;
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-position: -113px -1145px;
+      }
+    }
+
+    &--4 {
+      &::before {
+        background-position: -113px -1216px;
+      }
+    }
+
+    &--5 {
+      &::before {
+        background-position: -105px -1287px;
+      }
+    }
+
+    &--6 {
+      &::before {
+        background-position: -5px -1350px;
+      }
+    }
+
+    &--7 {
+      &::before {
+        background-position: -76px -1358px;
+      }
+    }
+
+    &--8 {
+      &::before {
+        background-position: -5px -1421px;
+      }
+    }
+
+    &--9 {
+      &::before {
+        background-position: -76px -1429px;
       }
     }
   }

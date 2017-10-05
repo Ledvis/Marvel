@@ -1,0 +1,37 @@
+.promo {
+  background: rgb(87, 87, 87) url("../img/promo-bg.jpg") no-repeat center;
+  background-size: cover;
+
+  &__wrapper {
+    @include container();
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    margin: 0 0 60px;
+    color: rgb(255, 255, 255);
+    font-family: Muli;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  &__buttons {}
+
+  .btn {
+    width: 170px;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+  }
+}

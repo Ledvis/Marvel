@@ -66,22 +66,22 @@
   }
 
   &__item-header {
-    position: relative;
     padding: 20px 0 80px;
-    background: url("../img/price-item-1.jpg") no-repeat center;
-    background-size: cover;
-  }
 
-  &__arrow {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    bottom: -10px;
-    left: 50%;
-    background-color: rgb(255, 228, 0);
-    border-radius: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
+    &--first {
+      background: url("../img/price-item-1.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &--second {
+      background: url("../img/price-item-2.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &--third {
+      background: url("../img/price-item-3.jpg") no-repeat center;
+      background-size: cover;
+    }
   }
 
   &__caption {
@@ -137,7 +137,47 @@
   }
 
   &__item-body {
+    position: relative;
     background-color: rgb(255, 255, 255);
+  }
+
+  &__arrow {
+    position: absolute;
+    display: none;
+    width: 80px;
+    height: 80px;
+    top: -70px;
+    left: 50%;
+    background-color: rgb(255, 228, 0);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    &--closed {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background: url("../img/sprite.png") no-repeat -5px -0px;
+        transform: translate(-50%, -50%) scale(0.2);
+      }
+    }
+
+    &--opened {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background: url("../img/sprite.png") no-repeat -5px -0px;
+        transform: translate(-50%, -50%) scale(0.2) rotate(180deg);
+      }
+    }
   }
 
   &__list {

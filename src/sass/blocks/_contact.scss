@@ -1,0 +1,124 @@
+.contact {
+  background: rgb(240, 240, 240) url("../img/contact-bg.jpg") no-repeat center;
+  background-size: cover;
+
+  &__wrapper {
+    @include container();
+    padding: 140px 15px 100px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 120px;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      content: "Contact";
+      position: absolute;
+      z-index: -1;
+      bottom: -14px;
+      left: 50%;
+      color: rgb(230, 230, 230);
+      font-family: Montserrat;
+      font-size: 91px;
+      font-weight: 900;
+      text-transform: uppercase;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+
+    input {
+      @include border-box();
+      width: 100%;
+      margin-bottom: 17px;
+      padding: 20px;
+      color: rgb(128, 128, 128);
+      font-family: Muli;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      border: 1px solid rgb(222, 222, 222);
+
+      &::placeholder {
+        color: rgb(128, 128, 128);
+        font-family: Muli;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+
+    textarea {
+      @include border-box();
+      width: 100%;
+      min-height: 310px;
+      margin-bottom: 25px;
+      padding: 20px;
+      color: rgb(128, 128, 128);
+      font-family: Muli;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      border: 1px solid rgb(222, 222, 222);
+      resize: none;
+
+      &::placeholder {
+        color: rgb(128, 128, 128);
+        font-family: Muli;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+
+    label.error {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: #F00;
+      font-weight: bold;
+    }
+
+    input.error,
+    textarea.error {
+      background: rgba(red, 0.1);
+      border: 1px red solid;
+    }
+
+    .btn {
+      width: 147px;
+      font-size: 17px;
+      line-height: 22px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__box {
+    position: relative;
+    flex-grow: 1;
+    width: 40%;
+
+    &:nth-of-type(2n-1) {
+      margin-right: 17px;
+    }
+
+    &--big {
+      width: 100%;
+
+      &:nth-of-type(2n-1) {
+        margin-right: 0;
+      }
+    }
+  }
+}
