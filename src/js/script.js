@@ -92,10 +92,20 @@ $('.service__decoration').hover(
 );
 
 $('.price__list').hide();
-
-$('.price__arrow').click(function() {
+var priceArrow = $('.price__arrow');
+priceArrow.show();
+priceArrow.addClass('price__arrow--closed');
+priceArrow.click(function() {
   var priceList = $(this).next('.price__list');
-  priceList.slideToggle();
+  if (priceList.is(':hidden')) {
+    priceList.slideDown();
+    $(this).addClass('price__arrow--opened');
+    $(this).removeClass('price__arrow--closed');
+  } else {
+    priceList.slideUp();
+    $(this).addClass('price__arrow--closed');
+    $(this).removeClass('price__arrow--opened');
+  }
 });
 
 var teamInfo = $('.team__info');
@@ -132,7 +142,9 @@ $('.contact__form').validate({
       required: true,
       email: true
     },
+    lastName: 'required',
     letter: {
+      required: true,
       maxlength: [5, 300]
     }
   },
